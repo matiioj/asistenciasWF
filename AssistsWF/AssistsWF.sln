@@ -5,6 +5,10 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssistsWF", "AssistsWF.csproj", "{FF1D97CF-7F11-4450-A366-79E3C591D470}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssistsWF.entities", "..\AssistsWF.entities\AssistsWF.entities.csproj", "{9C9CEFE6-783A-4D81-9F86-18819DDD1EA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssistsWF.services", "..\AssistsWF.services\AssistsWF.services.csproj", "{2314CF31-422F-4049-A9A7-0C5E3AD98B44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FF1D97CF-7F11-4450-A366-79E3C591D470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF1D97CF-7F11-4450-A366-79E3C591D470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF1D97CF-7F11-4450-A366-79E3C591D470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9CEFE6-783A-4D81-9F86-18819DDD1EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9CEFE6-783A-4D81-9F86-18819DDD1EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9CEFE6-783A-4D81-9F86-18819DDD1EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9CEFE6-783A-4D81-9F86-18819DDD1EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2314CF31-422F-4049-A9A7-0C5E3AD98B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2314CF31-422F-4049-A9A7-0C5E3AD98B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2314CF31-422F-4049-A9A7-0C5E3AD98B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2314CF31-422F-4049-A9A7-0C5E3AD98B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
