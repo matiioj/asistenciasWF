@@ -26,5 +26,24 @@ namespace AssistsWF
         {
 
         }
+
+        private void buttonIniciar_Click(object sender, EventArgs e)
+        {
+            var username = textBoxUsuario.Text;
+            var password = textBoxContra.Text;
+
+            var UserLogin = securityService.Login(string username, string password){
+                if(UserLogin != null)
+                {
+                    Inicio inicio = new Inicio(UserLogin);
+                    inicio.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                }
+            }
+        }
     }
 }
