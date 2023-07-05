@@ -1,0 +1,16 @@
+[
+    {
+        "id_materia":"00",
+        "nombre_materia":"matematica",
+        "estudiantes":[
+            {
+                "id_estudiante": "00",
+                "nombre_estudiante": "marcos"
+            },
+            {
+                "id_estudiante": "03",
+                "nombre_estudiante": "marisa"
+            }
+        ]
+    }
+]
