@@ -42,7 +42,7 @@
             // 
             buttonIniciar.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttonIniciar.Location = new Point(240, 236);
-            buttonIniciar.Margin = new Padding(2, 2, 2, 2);
+            buttonIniciar.Margin = new Padding(2);
             buttonIniciar.Name = "buttonIniciar";
             buttonIniciar.Size = new Size(58, 22);
             buttonIniciar.TabIndex = 0;
@@ -97,7 +97,7 @@
             // textBoxUsuario
             // 
             textBoxUsuario.Location = new Point(241, 157);
-            textBoxUsuario.Margin = new Padding(2, 2, 2, 2);
+            textBoxUsuario.Margin = new Padding(2);
             textBoxUsuario.Name = "textBoxUsuario";
             textBoxUsuario.Size = new Size(162, 23);
             textBoxUsuario.TabIndex = 5;
@@ -105,7 +105,7 @@
             // textBoxContra
             // 
             textBoxContra.Location = new Point(240, 202);
-            textBoxContra.Margin = new Padding(2, 2, 2, 2);
+            textBoxContra.Margin = new Padding(2);
             textBoxContra.Name = "textBoxContra";
             textBoxContra.Size = new Size(163, 23);
             textBoxContra.TabIndex = 6;
@@ -114,7 +114,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(622, 338);
+            ClientSize = new Size(584, 361);
             Controls.Add(textBoxContra);
             Controls.Add(textBoxUsuario);
             Controls.Add(labelContra);
@@ -122,8 +122,9 @@
             Controls.Add(labelPor);
             Controls.Add(labelBienvenido);
             Controls.Add(buttonIniciar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Login";
             ShowIcon = false;
             Text = "Login";

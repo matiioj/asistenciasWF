@@ -22,15 +22,15 @@ namespace AssistsWF
 
         private void buttonIniciar_Click(object sender, EventArgs e)
         {
-            var username = "";
-            var password = "";
+            var username = textBoxUsuario.Text;
+            var password = textBoxContra.Text;
 
-            var UserLogin = FormSecurityService.Login(textBoxUsuario.Text, textBoxContra.Text);
+            var UserLogin = FormSecurityService.Login(username, password);
             if (UserLogin != null)
             {
                 Inicio inicio = new Inicio(UserLogin);
                 inicio.Show();
-                this.Close();
+                this.Hide();
             }
             else
             {
