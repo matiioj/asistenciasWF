@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
+            listMaterias = new ListBox();
             labelHola = new Label();
             labelNombre = new Label();
             labelSeleccione = new Label();
             SuspendLayout();
             // 
-            // listBox1
+            // listMaterias
             // 
-            listBox1.DataSource = listBox1.CustomTabOffsets;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(107, 139);
-            listBox1.Margin = new Padding(2);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(184, 49);
-            listBox1.TabIndex = 0;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            listMaterias.DisplayMember = "None";
+            listMaterias.FormattingEnabled = true;
+            listMaterias.ItemHeight = 15;
+            listMaterias.Location = new Point(107, 139);
+            listMaterias.Margin = new Padding(2);
+            listMaterias.Name = "listMaterias";
+            listMaterias.Size = new Size(184, 49);
+            listMaterias.TabIndex = 0;
+            listMaterias.SelectedIndexChanged += listMaterias_SelectedIndexChanged;
             // 
             // labelHola
             // 
@@ -86,7 +86,7 @@
             Controls.Add(labelSeleccione);
             Controls.Add(labelNombre);
             Controls.Add(labelHola);
-            Controls.Add(listBox1);
+            Controls.Add(listMaterias);
             Margin = new Padding(2);
             Name = "Inicio";
             ShowIcon = false;
@@ -96,9 +96,11 @@
             PerformLayout();
         }
 
+
+
         #endregion
 
-        private ListBox listBox1;
+        private ListBox listMaterias;
         private Label labelHola;
         private Label labelNombre;
         private Label labelSeleccione;

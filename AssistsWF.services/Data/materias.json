@@ -12,5 +12,19 @@
                 "nombre_estudiante": "marisa"
             }
         ]
+    },
+    {
+        "id_materia":1,
+        "nombre_materia":"lengua",
+        "estudiantes":[
+            {
+                "id_estudiante": 1,
+                "nombre_estudiante": "luka"
+            },
+            {
+                "id_estudiante": 3,
+                "nombre_estudiante": "marisa"
+            }
+        ]
     }
 ]
