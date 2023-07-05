@@ -28,94 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Alumnos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Presente = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            Alumnos = new DataGridViewTextBoxColumn();
+            ID = new DataGridViewTextBoxColumn();
+            Presente = new DataGridViewCheckBoxColumn();
+            button1 = new Button();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Alumnos,
-            this.ID,
-            this.Presente});
-            this.dataGridView1.Location = new System.Drawing.Point(131, 109);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(514, 450);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Alumnos, ID, Presente });
+            dataGridView1.Location = new Point(44, 71);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 28;
+            dataGridView1.Size = new Size(516, 338);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Alumnos
             // 
-            this.Alumnos.HeaderText = "Alumnos";
-            this.Alumnos.MinimumWidth = 8;
-            this.Alumnos.Name = "Alumnos";
-            this.Alumnos.Width = 150;
+            Alumnos.HeaderText = "Alumnos";
+            Alumnos.MinimumWidth = 8;
+            Alumnos.Name = "Alumnos";
+            Alumnos.Width = 150;
             // 
             // ID
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 8;
-            this.ID.Name = "ID";
-            this.ID.Width = 150;
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 8;
+            ID.Name = "ID";
+            ID.Width = 150;
             // 
             // Presente
             // 
-            this.Presente.HeaderText = "¿Presente?";
-            this.Presente.MinimumWidth = 8;
-            this.Presente.Name = "Presente";
-            this.Presente.Width = 150;
+            Presente.HeaderText = "¿Presente?";
+            Presente.MinimumWidth = 8;
+            Presente.Name = "Presente";
+            Presente.Width = 150;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(363, 585);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Volver";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(273, 450);
+            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(58, 22);
+            button1.TabIndex = 1;
+            button1.Text = "Volver";
+            button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(160, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(473, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Indique si el alumno se encuentra presente";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(151, 32);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(313, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Indique si el alumno se encuentra presente";
             // 
             // ControlDeAlumnos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 644);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "ControlDeAlumnos";
-            this.ShowIcon = false;
-            this.Text = "Alumnos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(622, 483);
+            Controls.Add(label1);
+            Controls.Add(button1);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "ControlDeAlumnos";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Alumnos";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Alumnos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Presente;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Alumnos;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewCheckBoxColumn Presente;
+        private Button button1;
+        private Label label1;
     }
 }

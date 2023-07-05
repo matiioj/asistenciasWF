@@ -39,10 +39,10 @@
             listBox1.DataSource = listBox1.CustomTabOffsets;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(219, 164);
-            listBox1.Margin = new Padding(2, 2, 2, 2);
+            listBox1.Location = new Point(107, 139);
+            listBox1.Margin = new Padding(2);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(184, 94);
+            listBox1.Size = new Size(184, 49);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -50,7 +50,7 @@
             // 
             labelHola.AutoSize = true;
             labelHola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelHola.Location = new Point(215, 64);
+            labelHola.Location = new Point(107, 35);
             labelHola.Margin = new Padding(2, 0, 2, 0);
             labelHola.Name = "labelHola";
             labelHola.Size = new Size(42, 20);
@@ -61,7 +61,7 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNombre.Location = new Point(257, 64);
+            labelNombre.Location = new Point(168, 35);
             labelNombre.Margin = new Padding(2, 0, 2, 0);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(0, 20);
@@ -71,7 +71,7 @@
             // 
             labelSeleccione.AutoSize = true;
             labelSeleccione.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            labelSeleccione.Location = new Point(215, 126);
+            labelSeleccione.Location = new Point(107, 97);
             labelSeleccione.Margin = new Padding(2, 0, 2, 0);
             labelSeleccione.Name = "labelSeleccione";
             labelSeleccione.Size = new Size(147, 17);
@@ -82,14 +82,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(622, 338);
+            ClientSize = new Size(384, 211);
             Controls.Add(labelSeleccione);
             Controls.Add(labelNombre);
             Controls.Add(labelHola);
             Controls.Add(listBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Inicio";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio";
             ResumeLayout(false);
             PerformLayout();

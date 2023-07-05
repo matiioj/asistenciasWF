@@ -40,8 +40,9 @@
             // 
             // buttonIniciar
             // 
+            buttonIniciar.Anchor = AnchorStyles.None;
             buttonIniciar.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonIniciar.Location = new Point(240, 236);
+            buttonIniciar.Location = new Point(214, 264);
             buttonIniciar.Margin = new Padding(2);
             buttonIniciar.Name = "buttonIniciar";
             buttonIniciar.Size = new Size(58, 22);
@@ -52,9 +53,10 @@
             // 
             // labelBienvenido
             // 
+            labelBienvenido.Anchor = AnchorStyles.None;
             labelBienvenido.AutoSize = true;
             labelBienvenido.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelBienvenido.Location = new Point(265, 58);
+            labelBienvenido.Location = new Point(239, 86);
             labelBienvenido.Margin = new Padding(2, 0, 2, 0);
             labelBienvenido.Name = "labelBienvenido";
             labelBienvenido.Size = new Size(87, 20);
@@ -63,9 +65,10 @@
             // 
             // labelPor
             // 
+            labelPor.Anchor = AnchorStyles.None;
             labelPor.AutoSize = true;
             labelPor.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPor.Location = new Point(237, 86);
+            labelPor.Location = new Point(211, 114);
             labelPor.Margin = new Padding(2, 0, 2, 0);
             labelPor.Name = "labelPor";
             labelPor.Size = new Size(155, 17);
@@ -74,9 +77,10 @@
             // 
             // labelUsuario
             // 
+            labelUsuario.Anchor = AnchorStyles.None;
             labelUsuario.AutoSize = true;
             labelUsuario.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            labelUsuario.Location = new Point(237, 136);
+            labelUsuario.Location = new Point(211, 164);
             labelUsuario.Margin = new Padding(2, 0, 2, 0);
             labelUsuario.Name = "labelUsuario";
             labelUsuario.Size = new Size(57, 17);
@@ -85,9 +89,10 @@
             // 
             // labelContra
             // 
+            labelContra.Anchor = AnchorStyles.None;
             labelContra.AutoSize = true;
             labelContra.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            labelContra.Location = new Point(237, 183);
+            labelContra.Location = new Point(211, 211);
             labelContra.Margin = new Padding(2, 0, 2, 0);
             labelContra.Name = "labelContra";
             labelContra.Size = new Size(81, 17);
@@ -96,7 +101,8 @@
             // 
             // textBoxUsuario
             // 
-            textBoxUsuario.Location = new Point(241, 157);
+            textBoxUsuario.Anchor = AnchorStyles.None;
+            textBoxUsuario.Location = new Point(215, 185);
             textBoxUsuario.Margin = new Padding(2);
             textBoxUsuario.Name = "textBoxUsuario";
             textBoxUsuario.Size = new Size(162, 23);
@@ -104,7 +110,8 @@
             // 
             // textBoxContra
             // 
-            textBoxContra.Location = new Point(240, 202);
+            textBoxContra.Anchor = AnchorStyles.None;
+            textBoxContra.Location = new Point(214, 230);
             textBoxContra.Margin = new Padding(2);
             textBoxContra.Name = "textBoxContra";
             textBoxContra.Size = new Size(163, 23);
@@ -127,6 +134,7 @@
             Margin = new Padding(2);
             Name = "Login";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
