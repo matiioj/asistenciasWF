@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AssistsWF.entities\AssistsWF.entities.csproj" />
+  </ItemGroup>
+
 </Project>

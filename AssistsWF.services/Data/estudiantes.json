@@ -1,22 +1,22 @@
 [
     {
-        "id_estudiante": "00",
+        "id_estudiante": 0,
         "nombre_estudiante": "marcos"
     },
     {
-        "id_estudiante": "01",
+        "id_estudiante": 1,
         "nombre_estudiante": "luka"
     },
     {
-        "id_estudiante": "02",
+        "id_estudiante": 2,
         "nombre_estudiante": "alejandro"
     },
     {
-        "id_estudiante": "03",
+        "id_estudiante": 3,
         "nombre_estudiante": "marisa"
     },
     {
-        "id_estudiante": "04",
+        "id_estudiante": 4,
         "nombre_estudiante": "guadalupe"
     }
 ]

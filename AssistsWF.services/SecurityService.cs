@@ -1,4 +1,4 @@
-using AppClinica.Entities;
+using AssistsWF.entities;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.Json;

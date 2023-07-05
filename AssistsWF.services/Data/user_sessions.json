@@ -1,6 +1,6 @@
 [
     {
-        "id": "00",
+        "id": 1,
         "userName": "asd",
         "userPassword": "123",
         "Nombre": "Fernando",
@@ -8,7 +8,7 @@
         "userType": "user"
     },
     {
-        "id": "01",
+        "id": 2,
         "userName": "qwerty",
         "userPassword": "567",
         "Nombre": "Grego",
@@ -16,7 +16,7 @@
         "userType": "user"
     },
     {
-        "id": "02",
+        "id": 3,
         "userName": "admin",
         "userPassword": "admin",
         "Nombre": "dev",

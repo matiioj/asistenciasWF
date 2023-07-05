@@ -7,24 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AssistsWF.entities;
+using AssistsWF.services;
 
 namespace AssistsWF
 {
     public partial class Login : Form
     {
+        SecurityService FormSecurityService = new SecurityService();
         public Login()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonIniciar_Click(object sender, EventArgs e)
         {
+            var username = "";
+            var password = "";
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            var UserLogin = FormSecurityService.Login(textBoxUsuario.Text, textBoxContra.Text);
+            if (UserLogin != null)
+            {
+                Inicio inicio = new Inicio(UserLogin);
+                inicio.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
         }
     }
 }
