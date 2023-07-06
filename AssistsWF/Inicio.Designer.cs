@@ -32,6 +32,7 @@
             labelHola = new Label();
             labelNombre = new Label();
             labelSeleccione = new Label();
+            buttonAceptar = new Button();
             SuspendLayout();
             // 
             // listMaterias
@@ -39,7 +40,7 @@
             listMaterias.DisplayMember = "None";
             listMaterias.FormattingEnabled = true;
             listMaterias.ItemHeight = 15;
-            listMaterias.Location = new Point(107, 139);
+            listMaterias.Location = new Point(96, 113);
             listMaterias.Margin = new Padding(2);
             listMaterias.Name = "listMaterias";
             listMaterias.Size = new Size(184, 49);
@@ -50,7 +51,7 @@
             // 
             labelHola.AutoSize = true;
             labelHola.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelHola.Location = new Point(107, 35);
+            labelHola.Location = new Point(96, 9);
             labelHola.Margin = new Padding(2, 0, 2, 0);
             labelHola.Name = "labelHola";
             labelHola.Size = new Size(42, 20);
@@ -61,7 +62,7 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNombre.Location = new Point(168, 35);
+            labelNombre.Location = new Point(142, 9);
             labelNombre.Margin = new Padding(2, 0, 2, 0);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(0, 20);
@@ -71,18 +72,29 @@
             // 
             labelSeleccione.AutoSize = true;
             labelSeleccione.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            labelSeleccione.Location = new Point(107, 97);
+            labelSeleccione.Location = new Point(96, 71);
             labelSeleccione.Margin = new Padding(2, 0, 2, 0);
             labelSeleccione.Name = "labelSeleccione";
             labelSeleccione.Size = new Size(147, 17);
             labelSeleccione.TabIndex = 3;
             labelSeleccione.Text = "Seleccione su materia";
             // 
+            // buttonAceptar
+            // 
+            buttonAceptar.Location = new Point(153, 176);
+            buttonAceptar.Name = "buttonAceptar";
+            buttonAceptar.Size = new Size(75, 23);
+            buttonAceptar.TabIndex = 4;
+            buttonAceptar.Text = "Aceptar";
+            buttonAceptar.UseVisualStyleBackColor = true;
+            buttonAceptar.Click += buttonAceptar_Click;
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(384, 211);
+            Controls.Add(buttonAceptar);
             Controls.Add(labelSeleccione);
             Controls.Add(labelNombre);
             Controls.Add(labelHola);
@@ -104,5 +116,6 @@
         private Label labelHola;
         private Label labelNombre;
         private Label labelSeleccione;
+        private Button buttonAceptar;
     }
 }

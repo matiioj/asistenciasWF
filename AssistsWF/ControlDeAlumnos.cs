@@ -1,4 +1,5 @@
 ﻿using AssistsWF.entities;
+using AssistsWF.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,16 +14,13 @@ namespace AssistsWF
 {
     public partial class ControlDeAlumnos : Form
     {
-        public Materia MateriaSeleccionada { get; set; }
-        public ControlDeAlumnos(Materia materia)
+        MateriaPorID MateriaPorID = new MateriaPorID();
+
+        public ControlDeAlumnos(int materiaID)
         {
             InitializeComponent();
-            MateriaSeleccionada = materia;
-        }
-
-        private void ControlDeAlumnos_Load(object sender, EventArgs e)
-        {
-            if (MateriaSeleccionada != null)
+            Materia MateriaSeleccionada = MateriaPorID.GetMateriaID(materiaID);
+            if (MateriaSeleccionada != null )
             {
                 dataGridView1.DataSource = MateriaSeleccionada.estudiantes;
             }

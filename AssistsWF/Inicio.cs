@@ -34,23 +34,23 @@ namespace AssistsWF
             listMaterias.ValueMember = "id_materia";
         }
 
-        private bool ventanaAbierta = false;
+        private bool isFormAccepted = false;
 
         private void listMaterias_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!ventanaAbierta)
+            if (isFormAccepted)
             {
-                ventanaAbierta = true;
                 Materia materiaSeleccionada = (Materia)listMaterias.SelectedItem;
-                ControlDeAlumnos ventanaMateria = new ControlDeAlumnos(materiaSeleccionada);
+                int materiaID = materiaSeleccionada.id_materia;
+                ControlDeAlumnos ventanaMateria = new ControlDeAlumnos(materiaID);
 
-                ventanaMateria.FormClosed += (s, args) => { ventanaAbierta = false; };
-                ventanaMateria.ShowDialog();
+                ventanaMateria.Show();
             }
         }
 
-        
-
-
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            isFormAccepted = true;
+        }
     }
 }
