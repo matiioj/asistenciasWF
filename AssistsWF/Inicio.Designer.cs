@@ -99,11 +99,13 @@
             Controls.Add(labelNombre);
             Controls.Add(labelHola);
             Controls.Add(listMaterias);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             Name = "Inicio";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio";
+            
             ResumeLayout(false);
             PerformLayout();
         }

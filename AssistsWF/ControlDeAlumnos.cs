@@ -19,8 +19,11 @@ namespace AssistsWF
         public ControlDeAlumnos(int materiaID)
         {
             InitializeComponent();
+            ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             Materia MateriaSeleccionada = MateriaPorID.GetMateriaID(materiaID);
-            if (MateriaSeleccionada != null )
+            if (MateriaSeleccionada != null)
             {
                 dataGridView1.DataSource = MateriaSeleccionada.estudiantes;
             }

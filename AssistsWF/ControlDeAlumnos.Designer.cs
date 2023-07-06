@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            BtnVolver = new Button();
-            label1 = new Label();
             ID = new DataGridViewTextBoxColumn();
             Estudiante = new DataGridViewTextBoxColumn();
             Presente = new DataGridViewCheckBoxColumn();
+            BtnVolver = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -49,28 +49,6 @@
             dataGridView1.Size = new Size(516, 338);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // BtnVolver
-            // 
-            BtnVolver.Location = new Point(273, 450);
-            BtnVolver.Margin = new Padding(2);
-            BtnVolver.Name = "BtnVolver";
-            BtnVolver.Size = new Size(58, 22);
-            BtnVolver.TabIndex = 1;
-            BtnVolver.Text = "Volver";
-            BtnVolver.UseVisualStyleBackColor = true;
-            BtnVolver.Click += BtnVolver_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(151, 32);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(313, 20);
-            label1.TabIndex = 2;
-            label1.Text = "Indique si el alumno se encuentra presente";
             // 
             // ID
             // 
@@ -98,6 +76,28 @@
             Presente.ReadOnly = true;
             Presente.Width = 150;
             // 
+            // BtnVolver
+            // 
+            BtnVolver.Location = new Point(273, 450);
+            BtnVolver.Margin = new Padding(2);
+            BtnVolver.Name = "BtnVolver";
+            BtnVolver.Size = new Size(58, 22);
+            BtnVolver.TabIndex = 1;
+            BtnVolver.Text = "Volver";
+            BtnVolver.UseVisualStyleBackColor = true;
+            BtnVolver.Click += BtnVolver_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(151, 32);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(313, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Indique si el alumno se encuentra presente";
+            // 
             // ControlDeAlumnos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -106,6 +106,7 @@
             Controls.Add(label1);
             Controls.Add(BtnVolver);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             Name = "ControlDeAlumnos";
             ShowIcon = false;

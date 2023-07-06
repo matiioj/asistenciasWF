@@ -14,12 +14,16 @@ namespace AssistsWF
 {
     public partial class Inicio : Form
     {
+        private ControlDeAlumnos ventanaMateria;
         MateriasService materiasService = new MateriasService();
         public Usuario UserSession;
 
         public Inicio(Usuario returned)
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             UserSession = returned;
             labelNombre.Text = returned.Nombre + " " + returned.Apellido;
             LoadDataList();
@@ -34,23 +38,34 @@ namespace AssistsWF
             listMaterias.ValueMember = "id_materia";
         }
 
-        private bool isFormAccepted = false;
 
         private void listMaterias_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (isFormAccepted)
-            {
-                Materia materiaSeleccionada = (Materia)listMaterias.SelectedItem;
-                int materiaID = materiaSeleccionada.id_materia;
-                ControlDeAlumnos ventanaMateria = new ControlDeAlumnos(materiaID);
-
-                ventanaMateria.Show();
-            }
+            establecerVentana();
         }
+
+
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            isFormAccepted = true;
+            if (ventanaMateria != null || ventanaMateria.IsDisposed)
+            {
+                establecerVentana();
+            }
+
+            ventanaMateria.ShowDialog();
         }
+
+        private ControlDeAlumnos establecerVentana()
+        {
+            {
+                Materia materiaSeleccionada = (Materia)listMaterias.SelectedItem;
+                int materiaID = materiaSeleccionada.id_materia;
+                ventanaMateria = new ControlDeAlumnos(materiaID);
+                return ventanaMateria;
+            }
+        }
+
+        
     }
 }
