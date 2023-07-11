@@ -25,7 +25,7 @@ namespace AssistsWF
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
             UserSession = returned;
-            labelNombre.Text = returned.Nombre + " " + returned.Apellido;
+            labelNombre.Text = UserSession.Nombre + " " + UserSession.Apellido;
             LoadDataList();
             listMaterias.SelectionMode = SelectionMode.One;
 

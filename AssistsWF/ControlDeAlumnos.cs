@@ -14,7 +14,7 @@ namespace AssistsWF
 {
     public partial class ControlDeAlumnos : Form
     {
-        MateriaPorID MateriaPorID = new MateriaPorID();
+        MateriasService MateriaPorID = new MateriasService();
 
         public ControlDeAlumnos(int materiaID)
         {
