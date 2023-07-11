@@ -1,22 +1,17 @@
 [
-    {
-        "id_estudiante": 0,
-        "nombre_estudiante": "marcos"
-    },
-    {
-        "id_estudiante": 1,
-        "nombre_estudiante": "luka"
-    },
-    {
-        "id_estudiante": 2,
-        "nombre_estudiante": "alejandro"
-    },
-    {
-        "id_estudiante": 3,
-        "nombre_estudiante": "marisa"
-    },
-    {
-        "id_estudiante": 4,
-        "nombre_estudiante": "guadalupe"
-    }
+  {
+    "id_estudiante": 0,
+    "nombre_estudiante": "marcos",
+    "apellido_estudiante":  "moreira"
+  },
+  {
+    "id_estudiante": 1,
+    "nombre_estudiante": "luka",
+    "apellido_estudiante": "moreno"
+  },
+  {
+    "id_estudiante": 2,
+    "nombre_estudiante": "alejandro",
+    "apellido_estudiante": "fantino"
+  },
 ]

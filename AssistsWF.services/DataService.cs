@@ -9,7 +9,7 @@ namespace AssistsWF.services
 {
     public class DataService
     {
-        private const string PathFiles = @"C:\Users\PC\Downloads\asistenciasWF-main\asistenciasWF\AssistsWF.services\Data\";
+        private const string PathFiles = @"E:\ProgramCoding\c#-.net\AssistsWF\asistenciasWF\AssistsWF.services\Data\";
 
         //Traer los datos del Archivo Json
         public string GetDataFromFileJson(string FileName)
@@ -22,6 +22,20 @@ namespace AssistsWF.services
             }
 
             return DataReturn;
+        }
+
+        public bool SaveDataToFile(string JsonData, string FileName)
+        {
+            bool Success = false;
+            FileName = PathFiles + FileName;
+
+            if (File.Exists(FileName))
+            {
+                File.WriteAllText(FileName, JsonData);
+                Success = true;
+            }
+
+            return Success;
         }
     }
 }

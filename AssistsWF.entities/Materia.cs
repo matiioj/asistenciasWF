@@ -7,8 +7,12 @@ namespace AssistsWF.entities
     {
         public int id_materia { get; set; }
         public string nombre_materia { get; set; }
-        public List<Estudiante> estudiantes { get; set; }        
-        public List<Asistencia> asistencias { get; set; }
+        public List<Asistencia> asistencias_materia { get; set; }
+
+        public Materia()
+        {
+            asistencias_materia = new List<Asistencia>();
+        }
     }
 }
     

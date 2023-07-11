@@ -25,7 +25,7 @@ namespace AssistsWF.services
         {
             Materia materiaSeleccionada = null;
 
-            var Materias = GetAllMaterias()
+            var Materias = GetAllMaterias();
 
             materiaSeleccionada = Materias.FirstOrDefault(u => u.id_materia == materiaID);
 
