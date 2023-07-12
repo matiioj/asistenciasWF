@@ -115,7 +115,7 @@ namespace AssistsWF
                     }
                     break;
                 case 1: //Editando 
-                    if (estudianteService.EditEstudiante(CurrentEstudiante))
+                    if (estudianteService.EditEstudiante(CurrentEstudiante) && asignacionService.EditAsignacion(asignacion))
                     {
                         this.DialogResult = DialogResult.OK;
                         //this.Close();

@@ -35,7 +35,6 @@
             Presente = new DataGridViewCheckBoxColumn();
             BtnVolver = new Button();
             label1 = new Label();
-            buttonNuevo = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAlumnos).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +49,7 @@
             dataGridViewAlumnos.RowTemplate.Height = 28;
             dataGridViewAlumnos.Size = new Size(607, 338);
             dataGridViewAlumnos.TabIndex = 0;
-            dataGridViewAlumnos.CellContentClick += dataGridView1_CellContentClick;
+            
             // 
             // ID
             // 
@@ -86,7 +85,7 @@
             // 
             // BtnVolver
             // 
-            BtnVolver.Location = new Point(519, 450);
+            BtnVolver.Location = new Point(271, 430);
             BtnVolver.Margin = new Padding(2);
             BtnVolver.Name = "BtnVolver";
             BtnVolver.Size = new Size(58, 22);
@@ -106,23 +105,11 @@
             label1.TabIndex = 2;
             label1.Text = "Indique si el alumno se encuentra presente";
             // 
-            // buttonNuevo
-            // 
-            buttonNuevo.Location = new Point(275, 450);
-            buttonNuevo.Margin = new Padding(2);
-            buttonNuevo.Name = "buttonNuevo";
-            buttonNuevo.Size = new Size(58, 22);
-            buttonNuevo.TabIndex = 3;
-            buttonNuevo.Text = "Nuevo";
-            buttonNuevo.UseVisualStyleBackColor = true;
-            buttonNuevo.Click += buttonNuevo_Click;
-            // 
             // ControlDeAlumnosMateria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(626, 483);
-            Controls.Add(buttonNuevo);
+            ClientSize = new Size(627, 459);
             Controls.Add(label1);
             Controls.Add(BtnVolver);
             Controls.Add(dataGridViewAlumnos);

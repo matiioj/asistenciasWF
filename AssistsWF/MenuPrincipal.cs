@@ -29,6 +29,8 @@ namespace AssistsWF
 
         private void buttonAsistencia_Click(object sender, EventArgs e)
         {
+            Inicio inicio = new();
+            inicio.Show();
 
         }
     }
