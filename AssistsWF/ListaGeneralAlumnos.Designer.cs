@@ -45,6 +45,7 @@
             dataGridViewEstudiantes.Name = "dataGridViewEstudiantes";
             dataGridViewEstudiantes.ReadOnly = true;
             dataGridViewEstudiantes.RowTemplate.Height = 25;
+            dataGridViewEstudiantes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewEstudiantes.Size = new Size(767, 386);
             dataGridViewEstudiantes.TabIndex = 0;
             // 
@@ -92,13 +93,17 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(810, 450);
             Controls.Add(buttonEliminar);
             Controls.Add(buttonEditar);
             Controls.Add(button_Agregar);
             Controls.Add(button_Atras);
             Controls.Add(dataGridViewEstudiantes);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "ListaGeneralAlumnos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListaGeneralAlumnos";
             ((System.ComponentModel.ISupportInitialize)dataGridViewEstudiantes).EndInit();
             ResumeLayout(false);

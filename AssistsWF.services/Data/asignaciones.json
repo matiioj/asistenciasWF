@@ -5,5 +5,11 @@
       "c425a0e4-0566-4fbc-9792-08a933caa0d7",
       "a06077fe-c79a-47c5-b1a8-e87e2976a274"
     ]
+  },
+  {
+    "id_estudiante": "e0dc119b-bb00-425e-9947-720bb1148e70",
+    "id_materias": [
+      "a06077fe-c79a-47c5-b1a8-e87e2976a274"
+    ]
   }
 ]

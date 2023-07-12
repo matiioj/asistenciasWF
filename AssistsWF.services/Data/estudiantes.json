@@ -4,5 +4,11 @@
     "nombre_estudiante": "marcos",
     "apellido_estudiante": "moreira",
     "asistencias_estudiante": []
+  },
+  {
+    "id_estudiante": "e0dc119b-bb00-425e-9947-720bb1148e70",
+    "nombre_estudiante": "mati",
+    "apellido_estudiante": "ojeda",
+    "asistencias_estudiante": []
   }
 ]

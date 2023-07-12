@@ -32,11 +32,12 @@
             labelNombre = new Label();
             buttonGestor = new Button();
             buttonAsistencia = new Button();
-            label1 = new Label();
+            labelAdvice = new Label();
             SuspendLayout();
             // 
             // labelBienvenido
             // 
+            labelBienvenido.Anchor = AnchorStyles.None;
             labelBienvenido.AutoSize = true;
             labelBienvenido.BackColor = Color.Transparent;
             labelBienvenido.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
@@ -49,6 +50,7 @@
             // 
             // labelNombre
             // 
+            labelNombre.Anchor = AnchorStyles.None;
             labelNombre.AutoSize = true;
             labelNombre.BackColor = Color.Transparent;
             labelNombre.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -60,6 +62,7 @@
             // 
             // buttonGestor
             // 
+            buttonGestor.Anchor = AnchorStyles.None;
             buttonGestor.Location = new Point(224, 251);
             buttonGestor.Name = "buttonGestor";
             buttonGestor.Size = new Size(106, 44);
@@ -70,6 +73,7 @@
             // 
             // buttonAsistencia
             // 
+            buttonAsistencia.Anchor = AnchorStyles.None;
             buttonAsistencia.Location = new Point(432, 251);
             buttonAsistencia.Name = "buttonAsistencia";
             buttonAsistencia.Size = new Size(106, 44);
@@ -78,33 +82,37 @@
             buttonAsistencia.UseVisualStyleBackColor = true;
             buttonAsistencia.Click += buttonAsistencia_Click;
             // 
-            // label1
+            // labelAdvice
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(306, 178);
-            label1.Name = "label1";
-            label1.Size = new Size(147, 25);
-            label1.TabIndex = 4;
-            label1.Text = "Elija una opcion";
-            label1.UseMnemonic = false;
+            labelAdvice.Anchor = AnchorStyles.None;
+            labelAdvice.AutoSize = true;
+            labelAdvice.BackColor = Color.Transparent;
+            labelAdvice.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labelAdvice.Location = new Point(306, 178);
+            labelAdvice.Name = "labelAdvice";
+            labelAdvice.Size = new Size(147, 25);
+            labelAdvice.TabIndex = 4;
+            labelAdvice.Text = "Elija una opcion";
+            labelAdvice.UseMnemonic = false;
             // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = SystemColors.Control;
             BackgroundImage = Properties.Resources.purple_background;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(784, 409);
-            Controls.Add(label1);
+            Controls.Add(labelAdvice);
             Controls.Add(buttonAsistencia);
             Controls.Add(buttonGestor);
             Controls.Add(labelNombre);
             Controls.Add(labelBienvenido);
             Name = "MenuPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuPrincipal";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -115,6 +123,6 @@
         private Label labelNombre;
         private Button buttonGestor;
         private Button buttonAsistencia;
-        private Label label1;
+        private Label labelAdvice;
     }
 }

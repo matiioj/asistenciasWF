@@ -42,11 +42,36 @@ namespace AssistsWF
 
             textBoxNombre.Text = EstudianteFound.nombre_estudiante;
             textBoxApellido.Text = EstudianteFound.apellido_estudiante;
+            var asignacion = asignacionService.GetAsignacionEstudianteByID(IDEstudiante);
+
+            if (asignacion != null)
+            {
+                // Marca las materias correspondientes en el CheckedListBox
+                foreach (var idMateria in asignacion.id_materias)
+                {
+                    for (int i = 0; i < checkedListBoxMaterias.Items.Count; i++)
+                    {
+                        Materia materia = checkedListBoxMaterias.Items[i] as Materia;
+                        if (materia != null && materia.id_materia == idMateria)
+                        {
+                            checkedListBoxMaterias.SetItemChecked(i, true);
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error.");
+            }
         }
+
+
 
         private void button_Aceptar_Click(object sender, EventArgs e)
         {
-            if (CurrentEstudiante == null) //Solo si es un nuevo médico
+
+            if (CurrentEstudiante == null) //Solo si es un nuevo estudiante
             {
                 CurrentEstudiante = new Estudiante()
                 {
@@ -62,6 +87,13 @@ namespace AssistsWF
             {
                 idMaterias.Add(materia.id_materia);
             }
+
+            if (idMaterias.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar al menos una materia.");
+                return;
+            }
+
             AsignacionEstudianteMateria asignacion = new AsignacionEstudianteMateria
             {
                 id_estudiante = CurrentEstudiante.id_estudiante,
@@ -111,6 +143,7 @@ namespace AssistsWF
             foreach (Materia materia in materias)
             {
                 checkedListBoxMaterias.Items.Add(materia);
+                checkedListBoxMaterias.DisplayMember = "nombre_materia";
             }
         }
 

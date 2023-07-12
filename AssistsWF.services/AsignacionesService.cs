@@ -75,6 +75,17 @@ namespace AssistsWF.services
             return Success;
         }
 
+        public AsignacionEstudianteMateria GetAsignacionEstudianteByID(Guid IDEstudiante)
+        {
+            InicializarLista();
+            AsignacionEstudianteMateria asignacionFound = null;
+
+            asignacionFound = Asignaciones.FirstOrDefault(m => m.id_estudiante == IDEstudiante);
+
+            return asignacionFound;
+        }
+
+        
         
         
     }
