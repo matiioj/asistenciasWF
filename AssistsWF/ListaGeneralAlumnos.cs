@@ -16,6 +16,7 @@ namespace AssistsWF
     {
         EstudianteService estudianteService = new EstudianteService();
         MateriasService materiaService = new MateriasService();
+        AsignacionesService asignacionService = new();
         public ListaGeneralAlumnos()
         {
             InitializeComponent();
@@ -86,7 +87,7 @@ namespace AssistsWF
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un médico");
+                MessageBox.Show("Debe seleccionar un estudiante");
             }
         }
 
@@ -94,7 +95,7 @@ namespace AssistsWF
         {
             if (dataGridViewEstudiantes.SelectedRows.Count > 0)
             {
-                if (estudianteService.DeleteEstudiante(Guid.Parse(dataGridViewEstudiantes.CurrentRow.Cells[0].Value.ToString())))
+                if (estudianteService.DeleteEstudiante(Guid.Parse(dataGridViewEstudiantes.CurrentRow.Cells[0].Value.ToString())) && asignacionService.DeleteAsignacionesEstudiante(Guid.Parse(dataGridViewEstudiantes.CurrentRow.Cells[0].Value.ToString())))
                 {
                     CargarDatos();
                     MessageBox.Show("Estudiante eliminado con éxito.");

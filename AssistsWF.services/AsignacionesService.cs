@@ -57,6 +57,25 @@ namespace AssistsWF.services
 
             return Success;
         }
+
+        public bool DeleteAsignacionesEstudiante(Guid IDEstudiante)
+        {
+            bool Success = false;
+            InicializarLista();
+
+            Asignaciones.RemoveAll(a => a.id_estudiante == IDEstudiante);
+    
+            var JsonData = JsonSerializer.Serialize(Asignaciones, new JsonSerializerOptions { WriteIndented = true });
+            
+            if (JsonData != null)
+            {
+               Success = dataService.SaveDataToFile(JsonData, "asignaciones.json");
+            }
+
+            return Success;
+        }
+
+        
         
     }
 }
