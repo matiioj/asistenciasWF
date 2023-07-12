@@ -114,8 +114,10 @@
             textBoxContra.Location = new Point(214, 230);
             textBoxContra.Margin = new Padding(2);
             textBoxContra.Name = "textBoxContra";
+            textBoxContra.PasswordChar = '*';
             textBoxContra.Size = new Size(163, 23);
             textBoxContra.TabIndex = 6;
+            textBoxContra.UseSystemPasswordChar = true;
             // 
             // Login
             // 

@@ -10,5 +10,11 @@
     "nombre_estudiante": "mati",
     "apellido_estudiante": "ojeda",
     "asistencias_estudiante": []
+  },
+  {
+    "id_estudiante": "323a8e4b-9fd7-46e5-b9eb-d0ddc7450dfd",
+    "nombre_estudiante": "lauti",
+    "apellido_estudiante": "casais",
+    "asistencias_estudiante": []
   }
 ]
