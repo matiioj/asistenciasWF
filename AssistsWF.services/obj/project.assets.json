@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "AssistsWF.entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AssistsWF.entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AssistsWF.entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AssistsWF.entities/1.0.0": {
+      "type": "project",
+      "path": "../AssistsWF.entities/AssistsWF.entities.csproj",
+      "msbuildProject": "../AssistsWF.entities/AssistsWF.entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "AssistsWF.entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Franco Sistemas\\.nuget\\packages\\": {}
+    "C:\\Users\\Matias\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franco Sistemas\\Desktop\\assists\\asistenciasWF\\AssistsWF.services\\AssistsWF.services.csproj",
+      "projectUniqueName": "E:\\ProgramCoding\\c#-.net\\AssistsWF\\asistenciasWF\\AssistsWF.services\\AssistsWF.services.csproj",
       "projectName": "AssistsWF.services",
-      "projectPath": "C:\\Users\\Franco Sistemas\\Desktop\\assists\\asistenciasWF\\AssistsWF.services\\AssistsWF.services.csproj",
-      "packagesPath": "C:\\Users\\Franco Sistemas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Franco Sistemas\\Desktop\\assists\\asistenciasWF\\AssistsWF.services\\obj\\",
+      "projectPath": "E:\\ProgramCoding\\c#-.net\\AssistsWF\\asistenciasWF\\AssistsWF.services\\AssistsWF.services.csproj",
+      "packagesPath": "C:\\Users\\Matias\\.nuget\\packages\\",
+      "outputPath": "E:\\ProgramCoding\\c#-.net\\AssistsWF\\asistenciasWF\\AssistsWF.services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Franco Sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\ProgramCoding\\c#-.net\\AssistsWF\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj": {
+              "projectPath": "E:\\ProgramCoding\\c#-.net\\AssistsWF\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -61,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
