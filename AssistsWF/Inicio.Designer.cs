@@ -28,75 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.labelHola = new System.Windows.Forms.Label();
-            this.labelNombre = new System.Windows.Forms.Label();
-            this.labelSeleccione = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            listMaterias = new ListBox();
+            labelSeleccione = new Label();
+            buttonAceptar = new Button();
+            SuspendLayout();
             // 
-            // listBox1
+            // listMaterias
             // 
-            this.listBox1.DataSource = this.listBox1.CustomTabOffsets;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(282, 218);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(235, 124);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // labelHola
-            // 
-            this.labelHola.AutoSize = true;
-            this.labelHola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelHola.Location = new System.Drawing.Point(277, 86);
-            this.labelHola.Name = "labelHola";
-            this.labelHola.Size = new System.Drawing.Size(63, 29);
-            this.labelHola.TabIndex = 1;
-            this.labelHola.Text = "Hola";
-            // 
-            // labelNombre
-            // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelNombre.Location = new System.Drawing.Point(331, 86);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(186, 29);
-            this.labelNombre.TabIndex = 2;
-            this.labelNombre.Text = "nombreprofesor";
+            listMaterias.DisplayMember = "None";
+            listMaterias.FormattingEnabled = true;
+            listMaterias.ItemHeight = 15;
+            listMaterias.Location = new Point(96, 90);
+            listMaterias.Margin = new Padding(2);
+            listMaterias.Name = "listMaterias";
+            listMaterias.Size = new Size(184, 49);
+            listMaterias.TabIndex = 0;
+            listMaterias.SelectedIndexChanged += listMaterias_SelectedIndexChanged;
             // 
             // labelSeleccione
             // 
-            this.labelSeleccione.AutoSize = true;
-            this.labelSeleccione.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelSeleccione.Location = new System.Drawing.Point(277, 168);
-            this.labelSeleccione.Name = "labelSeleccione";
-            this.labelSeleccione.Size = new System.Drawing.Size(204, 25);
-            this.labelSeleccione.TabIndex = 3;
-            this.labelSeleccione.Text = "Seleccione su materia";
+            labelSeleccione.AutoSize = true;
+            labelSeleccione.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSeleccione.Location = new Point(106, 50);
+            labelSeleccione.Margin = new Padding(2, 0, 2, 0);
+            labelSeleccione.Name = "labelSeleccione";
+            labelSeleccione.Size = new Size(160, 20);
+            labelSeleccione.TabIndex = 3;
+            labelSeleccione.Text = "Seleccione la materia";
+            // 
+            // buttonAceptar
+            // 
+            buttonAceptar.Location = new Point(153, 162);
+            buttonAceptar.Name = "buttonAceptar";
+            buttonAceptar.Size = new Size(75, 23);
+            buttonAceptar.TabIndex = 4;
+            buttonAceptar.Text = "Aceptar";
+            buttonAceptar.UseVisualStyleBackColor = true;
+            buttonAceptar.Click += buttonAceptar_Click;
             // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelSeleccione);
-            this.Controls.Add(this.labelNombre);
-            this.Controls.Add(this.labelHola);
-            this.Controls.Add(this.listBox1);
-            this.Name = "Inicio";
-            this.ShowIcon = false;
-            this.Text = "Inicio";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(384, 211);
+            Controls.Add(buttonAceptar);
+            Controls.Add(labelSeleccione);
+            Controls.Add(listMaterias);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(2);
+            Name = "Inicio";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Inicio";
+            ResumeLayout(false);
+            PerformLayout();
         }
+
+
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label labelHola;
-        private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.Label labelSeleccione;
+        private ListBox listMaterias;
+        private Label labelSeleccione;
+        private Button buttonAceptar;
     }
 }

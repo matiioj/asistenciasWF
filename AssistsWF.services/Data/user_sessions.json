@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "userName": "asd",
+        "userPassword": "123",
+        "Nombre": "Fernando",
+        "Apellido": "Nando",
+        "userType": "user"
+    },
+    {
+        "id": 2,
+        "userName": "qwerty",
+        "userPassword": "567",
+        "Nombre": "Grego",
+        "Apellido": "Rosello",
+        "userType": "user"
+    },
+    {
+        "id": 3,
+        "userName": "admin",
+        "userPassword": "admin",
+        "Nombre": "dev",
+        "Apellido": "dev",
+        "userType": "admin"
+    }
+]
