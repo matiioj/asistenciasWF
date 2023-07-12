@@ -14,18 +14,16 @@ namespace AssistsWF
 {
     public partial class Inicio : Form
     {
-        private ControlDeAlumnos ventanaMateria;
+        private ControlDeAlumnosMateria ventanaMateria;
         MateriasService materiasService = new MateriasService();
-        public Usuario UserSession;
 
-        public Inicio(Usuario returned)
+        public Inicio()
         {
             InitializeComponent();
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            UserSession = returned;
-            labelNombre.Text = UserSession.Nombre + " " + UserSession.Apellido;
+
             LoadDataList();
             listMaterias.SelectionMode = SelectionMode.One;
 
@@ -56,16 +54,16 @@ namespace AssistsWF
             ventanaMateria.ShowDialog();
         }
 
-        private ControlDeAlumnos establecerVentana()
+        private ControlDeAlumnosMateria establecerVentana()
         {
             {
                 Materia materiaSeleccionada = (Materia)listMaterias.SelectedItem;
-                int materiaID = materiaSeleccionada.id_materia;
-                ventanaMateria = new ControlDeAlumnos(materiaID);
+                Guid materiaID = materiaSeleccionada.id_materia;
+                ventanaMateria = new ControlDeAlumnosMateria(materiaID);
                 return ventanaMateria;
             }
         }
 
-        
+
     }
 }

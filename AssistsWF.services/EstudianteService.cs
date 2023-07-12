@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AssistsWF.Services
+namespace AssistsWF.services
 {
     public class EstudianteService
     {
@@ -23,7 +23,7 @@ namespace AssistsWF.Services
         private void InicializarLista()
         {
             Estudiantes = null;
-            string DataJson = dataService.GetDataFromFileJson("Estudiantes.json");
+            string DataJson = dataService.GetDataFromFileJson("estudiantes.json");
             if (DataJson != null)
             {
                 Estudiantes = JsonSerializer.Deserialize<List<Estudiante>>(DataJson);
@@ -34,7 +34,7 @@ namespace AssistsWF.Services
             }
         }
 
-        public bool AddMedico(Estudiante estudiante)
+        public bool AddEstudiante(Estudiante estudiante)
         {
             bool Success = false;
 
@@ -50,23 +50,23 @@ namespace AssistsWF.Services
             return Success;
         }
 
-        public List<Estudiante> GetEstudiantes()
+        public List<Estudiante> GetAllEstudiantes()
         {
             InicializarLista();
             return Estudiantes;
         }
 
-        public Estudiante GetEstudianteById(int Estudiante)
+        public Estudiante GetEstudianteById(Guid IDEstudiante)
         {
             InicializarLista();
             Estudiante EstudianteFound = null;
 
-            EstudianteFound = Estudiantes.FirstOrDefault(m => m.Id == id_estudiante);
+            EstudianteFound = Estudiantes.FirstOrDefault(m => m.id_estudiante == IDEstudiante);
 
             return EstudianteFound;
         }
 
-        public bool EditMedico(Estudiante EstudianteEdit)
+        public bool EditEstudiante(Estudiante EstudianteEdit)
         {
             bool Success = false;
             InicializarLista();
@@ -78,27 +78,27 @@ namespace AssistsWF.Services
 
             if (JsonData != null)
             {
-                Success = dataService.SaveDataToFile(JsonData, "Medicos.json");
+                Success = dataService.SaveDataToFile(JsonData, "estudiantes.json");
             }
 
             return Success;
         }
 
-        public bool DeleteMedico(Guid IdMedico)
+        public bool DeleteEstudiante(Guid IDEstudiante)
         {
             bool Success = false;
             InicializarLista();
 
-            int Index = Medicos.FindIndex(m => m.Id == IdMedico);
+            int Index = Estudiantes.FindIndex(m => m.id_estudiante == IDEstudiante);
 
             if (Index >= 0)
             {
-                Medicos.RemoveAt(Index);
-                var JsonData = JsonSerializer.Serialize(Medicos, new JsonSerializerOptions { WriteIndented = true });
+                Estudiantes.RemoveAt(Index);
+                var JsonData = JsonSerializer.Serialize(Estudiantes, new JsonSerializerOptions { WriteIndented = true });
 
                 if (JsonData != null)
                 {
-                    Success = dataService.SaveDataToFile(JsonData, "Medicos.json");
+                    Success = dataService.SaveDataToFile(JsonData, "Estudiantes.json");
                 }
             }
 

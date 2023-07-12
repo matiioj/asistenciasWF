@@ -5,7 +5,7 @@ namespace AssistsWF.entities
 {
     public class Materia
     {
-        public int id_materia { get; set; }
+        public Guid id_materia { get; set; }
         public string nombre_materia { get; set; }
         public List<Asistencia> asistencias_materia { get; set; }
 

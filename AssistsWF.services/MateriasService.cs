@@ -21,7 +21,7 @@ namespace AssistsWF.services
             return Materias;
         }
 
-        public Materia GetMateriaID(int materiaID)
+        public Materia GetMateriaID(Guid materiaID)
         {
             Materia materiaSeleccionada = null;
 

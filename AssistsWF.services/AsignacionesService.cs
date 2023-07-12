@@ -11,25 +11,52 @@ namespace AssistsWF.services
     public class AsignacionesService
     {
         DataService dataService = new DataService();
+        List<AsignacionEstudianteMateria> Asignaciones;
 
-        public List<Materia> GetAllMaterias()
+        public AsignacionesService()
+        {
+            dataService = new();
+            InicializarLista();
+        }
+
+        private void InicializarLista()
+        {
+            Asignaciones = null;
+            string DataJson = dataService.GetDataFromFileJson("asignaciones.json");
+            if (DataJson != null)
+            {
+                Asignaciones = JsonSerializer.Deserialize<List<AsignacionEstudianteMateria>>(DataJson);
+            }
+            else
+            {
+                Asignaciones = new List<AsignacionEstudianteMateria>();
+            }
+        }
+
+        public List<AsignacionEstudianteMateria> GetAllAsignaciones()
         {
             string DataJson = dataService.GetDataFromFileJson("asignaciones.json");
 
-            var asignaciones = JsonSerializer.Deserialize<List<Materia>>(DataJson);
+            var Asignaciones = JsonSerializer.Deserialize<List<AsignacionEstudianteMateria>>(DataJson);
 
-            return Materias;
+            return Asignaciones;
         }
 
-        public Materia GetMateriaID(int materiaID)
+        public bool AddAsignacion(AsignacionEstudianteMateria asignacion)
         {
-            Materia materiaSeleccionada = null;
+            bool Success = false;
 
-            var Materias = GetAllMaterias();
+            Asignaciones.Add(asignacion);
 
-            materiaSeleccionada = Materias.FirstOrDefault(u => u.id_materia == materiaID);
+            var JsonData = JsonSerializer.Serialize(Asignaciones, new JsonSerializerOptions { WriteIndented = true });
 
-            return materiaSeleccionada;
+            if (JsonData != null)
+            {
+                Success = dataService.SaveDataToFile(JsonData, "asignaciones.json");
+            }
+
+            return Success;
         }
+        
     }
 }

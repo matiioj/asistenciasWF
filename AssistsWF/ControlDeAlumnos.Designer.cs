@@ -1,6 +1,6 @@
 ﻿namespace AssistsWF
 {
-    partial class ControlDeAlumnos
+    partial class ControlDeAlumnosMateria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dataGridViewAlumnos = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
-            Estudiante = new DataGridViewTextBoxColumn();
+            NombreEstudiante = new DataGridViewTextBoxColumn();
+            ApellidoEstudiante = new DataGridViewTextBoxColumn();
             Presente = new DataGridViewCheckBoxColumn();
             BtnVolver = new Button();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            buttonNuevo = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAlumnos).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewAlumnos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Estudiante, Presente });
-            dataGridView1.Location = new Point(44, 71);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 28;
-            dataGridView1.Size = new Size(516, 338);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridViewAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAlumnos.Columns.AddRange(new DataGridViewColumn[] { ID, NombreEstudiante, ApellidoEstudiante, Presente });
+            dataGridViewAlumnos.Location = new Point(11, 78);
+            dataGridViewAlumnos.Margin = new Padding(2);
+            dataGridViewAlumnos.Name = "dataGridViewAlumnos";
+            dataGridViewAlumnos.RowHeadersWidth = 62;
+            dataGridViewAlumnos.RowTemplate.Height = 28;
+            dataGridViewAlumnos.Size = new Size(607, 338);
+            dataGridViewAlumnos.TabIndex = 0;
+            dataGridViewAlumnos.CellContentClick += dataGridView1_CellContentClick;
             // 
             // ID
             // 
@@ -59,14 +61,20 @@
             ID.ReadOnly = true;
             ID.Width = 150;
             // 
-            // Estudiante
+            // NombreEstudiante
             // 
-            Estudiante.DataPropertyName = "nombre_estudiante";
-            Estudiante.HeaderText = "Estudiante";
-            Estudiante.MinimumWidth = 8;
-            Estudiante.Name = "Estudiante";
-            Estudiante.ReadOnly = true;
-            Estudiante.Width = 150;
+            NombreEstudiante.DataPropertyName = "nombre_estudiante";
+            NombreEstudiante.HeaderText = "Nombre";
+            NombreEstudiante.MinimumWidth = 8;
+            NombreEstudiante.Name = "NombreEstudiante";
+            NombreEstudiante.ReadOnly = true;
+            NombreEstudiante.Width = 150;
+            // 
+            // ApellidoEstudiante
+            // 
+            ApellidoEstudiante.DataPropertyName = "apellido_estudiante";
+            ApellidoEstudiante.HeaderText = "Apellido";
+            ApellidoEstudiante.Name = "ApellidoEstudiante";
             // 
             // Presente
             // 
@@ -78,7 +86,7 @@
             // 
             // BtnVolver
             // 
-            BtnVolver.Location = new Point(273, 450);
+            BtnVolver.Location = new Point(519, 450);
             BtnVolver.Margin = new Padding(2);
             BtnVolver.Name = "BtnVolver";
             BtnVolver.Size = new Size(58, 22);
@@ -98,32 +106,46 @@
             label1.TabIndex = 2;
             label1.Text = "Indique si el alumno se encuentra presente";
             // 
-            // ControlDeAlumnos
+            // buttonNuevo
+            // 
+            buttonNuevo.Location = new Point(275, 450);
+            buttonNuevo.Margin = new Padding(2);
+            buttonNuevo.Name = "buttonNuevo";
+            buttonNuevo.Size = new Size(58, 22);
+            buttonNuevo.TabIndex = 3;
+            buttonNuevo.Text = "Nuevo";
+            buttonNuevo.UseVisualStyleBackColor = true;
+            buttonNuevo.Click += buttonNuevo_Click;
+            // 
+            // ControlDeAlumnosMateria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(622, 483);
+            ClientSize = new Size(626, 483);
+            Controls.Add(buttonNuevo);
             Controls.Add(label1);
             Controls.Add(BtnVolver);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewAlumnos);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
-            Name = "ControlDeAlumnos";
+            Name = "ControlDeAlumnosMateria";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Alumnos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAlumnos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewAlumnos;
         private Button BtnVolver;
         private Label label1;
+        private Button buttonNuevo;
         private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Estudiante;
+        private DataGridViewTextBoxColumn NombreEstudiante;
+        private DataGridViewTextBoxColumn ApellidoEstudiante;
         private DataGridViewCheckBoxColumn Presente;
     }
 }

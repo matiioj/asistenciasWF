@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace AssistsWF
 {
-    public partial class ControlDeAlumnos : Form
+    public partial class ControlDeAlumnosMateria : Form
     {
         MateriasService MateriaPorID = new MateriasService();
 
-        public ControlDeAlumnos(int materiaID)
+        public ControlDeAlumnosMateria(Guid materiaID)
         {
             InitializeComponent();
             ControlBox = false;
@@ -25,7 +25,7 @@ namespace AssistsWF
             Materia MateriaSeleccionada = MateriaPorID.GetMateriaID(materiaID);
             if (MateriaSeleccionada != null)
             {
-                dataGridView1.DataSource = MateriaSeleccionada.estudiantes;
+                dataGridViewAlumnos.DataSource = MateriaSeleccionada;
             }
             else
             {
@@ -42,5 +42,19 @@ namespace AssistsWF
         {
             this.Close();
         }
+
+        private void buttonNuevo_Click(object sender, EventArgs e)
+        {
+            FormRegistroAlumnos FormGestor = new FormRegistroAlumnos(Guid.Empty);
+            FormGestor.ShowDialog();
+            LoadDataGridView();
+        }
+
+        private void LoadDataGridView()
+        {
+            dataGridViewAlumnos.AutoGenerateColumns = false;
+            dataGridViewAlumnos.DataSource = null;
+        }
+
     }
 }

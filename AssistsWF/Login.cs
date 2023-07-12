@@ -28,8 +28,8 @@ namespace AssistsWF
             var UserLogin = FormSecurityService.Login(username, password);
             if (UserLogin != null)
             {
-                Inicio inicio = new Inicio(UserLogin);
-                inicio.Show();
+                MenuPrincipal menu = new MenuPrincipal(UserLogin);
+                menu.Show();
                 this.Hide();
             }
             else
