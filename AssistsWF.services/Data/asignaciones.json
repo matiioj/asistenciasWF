@@ -2,8 +2,7 @@
   {
     "id_estudiante": "279c11d2-e8c1-4aee-b6a0-2acc585f6714",
     "id_materias": [
-      "c425a0e4-0566-4fbc-9792-08a933caa0d7",
-      "a06077fe-c79a-47c5-b1a8-e87e2976a274"
+      "c425a0e4-0566-4fbc-9792-08a933caa0d7"
     ]
   },
   {
@@ -13,8 +12,9 @@
     ]
   },
   {
-    "id_estudiante": "323a8e4b-9fd7-46e5-b9eb-d0ddc7450dfd",
+    "id_estudiante": "b5fbd30a-f167-43a0-854a-9a097a295783",
     "id_materias": [
+      "c425a0e4-0566-4fbc-9792-08a933caa0d7",
       "a06077fe-c79a-47c5-b1a8-e87e2976a274"
     ]
   }

@@ -101,7 +101,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.Control;
-            BackgroundImage = Properties.Resources.purple_background;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(784, 409);
             Controls.Add(labelAdvice);

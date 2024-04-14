@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Franco Sistemas\\.nuget\\packages\\": {}
+    "C:\\Users\\Matias\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franco Sistemas\\Desktop\\assists\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj",
+      "projectUniqueName": "E:\\Relocated\\Desktop\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj",
       "projectName": "AssistsWF.entities",
-      "projectPath": "C:\\Users\\Franco Sistemas\\Desktop\\assists\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj",
-      "packagesPath": "C:\\Users\\Franco Sistemas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Franco Sistemas\\Desktop\\assists\\asistenciasWF\\AssistsWF.entities\\obj\\",
+      "projectPath": "E:\\Relocated\\Desktop\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj",
+      "packagesPath": "C:\\Users\\Matias\\.nuget\\packages\\",
+      "outputPath": "E:\\Relocated\\Desktop\\asistenciasWF\\AssistsWF.entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Franco Sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,12 +56,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.26, 6.0.26]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.26, 6.0.26]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.26, 6.0.26]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

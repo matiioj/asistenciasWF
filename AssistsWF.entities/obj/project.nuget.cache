@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "w+EXjykcABeT4LIY1fcyj5u9gdczOl2qTh1ZBXf/lNt7KNiZ/a8rO6j5ijjkotIf2JZhbCmtuXOwgJDOqZO62Q==",
+  "dgSpecHash": "Ib5dijQ/u0E7bSDDtQjbjn6oTh+C7qU0FFTE/Wg0Fh7BjAqP5aLMH4rIayDzr3GF9fMz2b55gjGx9OlgWbv7UA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Franco Sistemas\\Desktop\\assists\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Relocated\\Desktop\\asistenciasWF\\AssistsWF.entities\\AssistsWF.entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Matias\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\Matias\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\Matias\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+  ],
   "logs": []
 }

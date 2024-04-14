@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssistsWF.services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+817b8e79ff22b62ca4c8eb25747ea6fbed6f08df")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssistsWF.services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssistsWF.services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
